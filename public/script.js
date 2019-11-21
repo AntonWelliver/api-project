@@ -31,12 +31,11 @@ function getWeather() {
     const weatherTemperature = document.getElementById("weatherTemperature");
 
     accessHTTP
-        .get("http://api.openweathermap.org/data/2.5/weather?q=Göteborg,SE&APPID=2244525827f5b74d1d5dbc7bd3cd7474")
+        .get("http://localhost:3000/weather")
         .then(theWeather => {
-            let temp = parseInt(Number(theWeather.main.temp)) - 273;
             weatherLocation.innerHTML = theWeather.name;
-            weatherDescription.innerHTML = theWeather.weather[0].description;
-            weatherTemperature.innerHTML = `${temp} °C`;
+            weatherDescription.innerHTML = theWeather.description;
+            weatherTemperature.innerHTML = `${theWeather.temperature} °C`;
         })
         .catch(err => console.log(err));
 }
