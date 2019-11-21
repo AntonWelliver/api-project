@@ -29,9 +29,10 @@ function getWeather() {
     const weatherLocation = document.getElementById("weatherLocation");
     const weatherDescription = document.getElementById("weatherDescription");
     const weatherTemperature = document.getElementById("weatherTemperature");
+    const serverURI = window.location.host;
 
     accessHTTP
-        .get("http://localhost:3000/weather")
+        .get(`http://${serverURI}/weather`)
         .then(theWeather => {
             weatherLocation.innerHTML = theWeather.name;
             weatherDescription.innerHTML = theWeather.description;
@@ -39,6 +40,7 @@ function getWeather() {
         })
         .catch(err => console.log(err));
 }
+console.log(window.location.host);
 
 getJoke();
 getWeather();
