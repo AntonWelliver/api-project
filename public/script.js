@@ -62,16 +62,18 @@ function getSoccerStats() {
                 goalDifference = element.goalDifference;
                 points = element.points;
 
-                output += `<p>${leaguePosition}
-                                ${teamName} 
-                                ${playedGames} 
-                                ${gamesWon} 
-                                ${gamesDrawn} 
-                                ${gamesLost} 
-                                ${goalsFor} 
-                                ${goalsAgainst} 
-                                ${goalDifference} 
-                                ${points}</p>`;
+                output += `<tr>
+                <td>${leaguePosition}</td>
+                <td>${teamName}</td>
+                <td>${playedGames}</td> 
+                <td>${gamesWon}</td>
+                <td>${gamesDrawn}</td>
+                <td>${gamesLost}</td>
+                <td>${goalsFor}</td>
+                <td>${goalsAgainst}</td>
+                <td>${goalDifference}</td>
+                <td>${points}</td>
+                </tr>`;
             });
             soccerStats.innerHTML = output;
         })

@@ -17,6 +17,16 @@
 
     <body>
         <div>
+            <div class="weatherStyle">
+                <u><h1>Weather in:</h1></u>
+                <h2 id="weatherLocation"></h2>
+                <h3 id="weatherDescription"></h3>
+                <h3 id="weatherTemperature"></h3>
+            </div>
+
+            <hr />
+
+            <h1>Premier League Table</h1>
             <div class="table-responsive soccerTableStyle">
                 <table class="table table-striped">
                     <thead>
@@ -33,17 +43,8 @@
                             <th scope="col">Points</th>
                         </tr>
                     </thead>
+                    <tbody id="soccerStats"></tbody>
                 </table>
-            </div>
-            <div id="soccerStats"></div>
-
-            <hr />
-
-            <div class="weatherStyle">
-                <h1>Weather in:</h1>
-                <h2 id="weatherLocation"></h2>
-                <h3 id="weatherDescription"></h3>
-                <h3 id="weatherTemperature"></h3>
             </div>
         </div>
         <script src="script.js"></script>
