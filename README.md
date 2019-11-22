@@ -4,6 +4,8 @@ Denna hemsida hämtar och visar information från två olika tredjepartssystem. 
 
 Det som behövs för att du ska kunna köra detta projekt är att du kör npm install i terminalen och sen startar man projektet med kommandot node index.js. Jag har använt localhost port: 3000.
 
+GitHub repo: https://github.com/AntonWelliver/api-project
+
 # Uppgiften
 
 I den här inlämningen skall du skapa en hemsida som hämtar och visar information från
