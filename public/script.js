@@ -31,4 +31,52 @@ function getWeather() {
         .catch(err => console.log(err));
 }
 
+function getSoccerStats() {
+    const soccerStats = document.getElementById("soccerStats");
+    const serverURI = window.location.host;
+
+    let leaguePosition = "";
+    let teamName = "";
+    let playedGames = "";
+    let gamesWon = "";
+    let gamesDrawn = "";
+    let gamesLost = "";
+    let goalsFor = "";
+    let goalsAgainst = "";
+    let goalDifference = "";
+    let points = "";
+    let output = "";
+
+    accessHTTP
+        .get(`http://${serverURI}/soccerStats`)
+        .then(theSoccerStats => {
+            theSoccerStats.forEach(element => {
+                leaguePosition = element.position;
+                teamName = element.team.name;
+                playedGames = element.playedGames;
+                gamesWon = element.won;
+                gamesDrawn = element.draw;
+                gamesLost = element.lost;
+                goalsFor = element.goalsFor;
+                goalsAgainst = element.goalsAgainst;
+                goalDifference = element.goalDifference;
+                points = element.points;
+
+                output += `<p>${leaguePosition}
+                                ${teamName} 
+                                ${playedGames} 
+                                ${gamesWon} 
+                                ${gamesDrawn} 
+                                ${gamesLost} 
+                                ${goalsFor} 
+                                ${goalsAgainst} 
+                                ${goalDifference} 
+                                ${points}</p>`;
+            });
+            soccerStats.innerHTML = output;
+        })
+        .catch(err => console.log(err));
+}
+
 getWeather();
+getSoccerStats();

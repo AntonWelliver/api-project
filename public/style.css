@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    color: green;
+}
+
+.weatherStyle {
+    background-color: aqua;
+    color: black;
+    text-align: center;
+}
+
+.soccerTableStyle {
+    background-color: black;
+    color: red;
+}
+
+#soccerStats {
+    color: greenyellow;
+}
