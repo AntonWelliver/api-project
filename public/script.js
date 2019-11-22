@@ -14,16 +14,6 @@ class AccessHTTP {
 
 let accessHTTP = new AccessHTTP();
 
-function getJoke() {
-    const jokeDisplayArea = document.getElementById("jokeDisplayArea");
-
-    accessHTTP
-        .get("https://api.chucknorris.io/jokes/random")
-        .then(theJoke => {
-            jokeDisplayArea.innerHTML = theJoke.value;
-        })
-        .catch(err => console.log(err));
-}
 
 function getWeather() {
     const weatherLocation = document.getElementById("weatherLocation");
@@ -40,7 +30,5 @@ function getWeather() {
         })
         .catch(err => console.log(err));
 }
-console.log(window.location.host);
 
-getJoke();
 getWeather();
